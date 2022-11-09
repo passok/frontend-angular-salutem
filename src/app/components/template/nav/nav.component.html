@@ -1,0 +1,19 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a routerLink="" mat-list-item>
+        <em class="material-icons">home</em>
+        Home
+      </a>
+      <a routerLink="/pessoas" mat-list-item>
+        <em class="material-icons">group</em>
+        Pessoas
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

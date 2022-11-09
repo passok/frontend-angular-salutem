@@ -1,0 +1,19 @@
+<form>
+  <h1>Adicionar nova pessoa</h1>
+
+  <mat-form-field class="form">
+    <input matInput [(ngModel)]="pessoas.nome" [formControl]="nome" required type="text" name="nome" placeholder="Nome">
+  </mat-form-field>
+  <mat-form-field class="form">
+    <input matInput [(ngModel)]="pessoas.cpf" [formControl]="cpf" required type="cpf" name="cpf" placeholder="CPF" mask="000.000.000-00">
+  </mat-form-field>
+  <mat-form-field class="form">
+    <input matInput [(ngModel)]="pessoas.data" [formControl]="data" required type="data" name="data" placeholder="Data de Nascimento" mask="d0/m0/0000">
+  </mat-form-field>
+
+  <div class="buttons">
+    <button (click)="create()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button color="primary">Adicionar</button>
+    <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">Cancelar</button>
+  </div>
+
+</form>
